@@ -160,7 +160,15 @@ addItem을 호출 하면서 인자를 10을 주었으니 , 컴파일러는 일�
 
 컴파일이 잘 됩니다. 왠지 헛수고 했다는 생각이 드네요.
 
-결론적으로 말하면 ,  var 변수를 선언하거나 implicit evidence 로 type을 제한 하는 것은,  
+var 변수를 선언하거나 implicit evidence 로 type을 제한 하는 것은,  
 공변적이라는 의미와 맞지 않아서 적절한 코드가 아닙니다.
+ 
+저는 공변성에 대해서 `ListWrapper[String]` 타입은 `ListWrapper[Any]` 타입의 subtype 이다 라는 수준으로만 생각 했기 때문에,  
+계속 말도 안되는 코드를 만드려고 했었습니다.    
+
+대신  
+> `ListWrapper가 공변적일 때 , ListWrapper[String]` 타입은 언제든지 `ListWrapper[Any]` 타입으로 바뀔 수 있다. 
+
+라고 생각을 바꾸니까,  언제 공변형을 써야 하는지 , 특정 경우에는 왜 쓰면 안되는지에 대해서 약간 명확해졌습니다.
 
 ListWrapper는 굳이 공변적이어야 할 이유가 없고,  공변적일 필요가 있다면 immutable 하게 구현 하는 것이 적절한 구현 방법일 것 같습니다.
