@@ -167,7 +167,7 @@ var 변수를 선언하거나 implicit evidence 로 type을 제한 하는 것은
 계속 말도 안되는 코드를 만드려고 했었습니다.    
 
 대신  
-> `ListWrapper가 공변적일 때 , ListWrapper[String]` 타입은 언제든지 `ListWrapper[Any]` 타입으로 바뀔 수 있다. 
+> `ListWrapper가 공변적일 때 , ListWrapper[String]` 타입은 언제든지 `ListWrapper[Any]` 타입으로 바뀔 수 있고 바뀌는 것이 가능해야 한다. 
 
 라고 생각을 바꾸니까,  언제 공변형을 써야 하는지 , 특정 경우에는 왜 쓰면 안되는지에 대해서 약간 명확해졌습니다.
 
